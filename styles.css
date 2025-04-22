@@ -1,0 +1,116 @@
+:root {
+    --primary: #003087; /* Navy blue for navbar and accents */
+    --secondary: #f8f9fa; /* Light gray for backgrounds */
+    --accent: #28a745; /* Green for buttons */
+    --text: #333333; /* Dark gray for text */
+}
+
+html {
+    scroll-padding-top: 70px; /* Offset for anchor links to account for fixed navbar */
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--secondary);
+    color: var(--text);
+    padding-top: 70px; /* Adds gap between fixed navbar and content */
+}
+
+.navbar {
+    background-color: var(--primary);
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.card {
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0,0, 0.1);
+    transition: transform 0.2s;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+h2 {
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+section {
+    min-height: 300px;
+    padding: 40px 0;
+}
+
+#home {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote {
+    color: #6c757d; /* Muted gray to differentiate from main text */
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    background-color: var(--primary);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e0e0e0;
+}
